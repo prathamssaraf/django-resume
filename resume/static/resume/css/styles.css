@@ -1,0 +1,170 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.cv-container {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.header {
+    text-align: center;
+    border-bottom: 3px solid #2c3e50;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.name {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.education-item, .experience-item, .project-item {
+    margin-bottom: 20px;
+}
+
+.institution, .company, .project-name {
+    font-weight: bold;
+    color: #2c3e50;
+    font-size: 1.1em;
+}
+
+.degree, .position {
+    color: #3498db;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.dates {
+    float: right;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.location {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.gpa {
+    color: #27ae60;
+    font-weight: 600;
+}
+
+.coursework {
+    font-style: italic;
+    color: #555;
+}
+
+.responsibilities {
+    margin-top: 10px;
+}
+
+.responsibilities ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+.responsibilities li {
+    margin-bottom: 5px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-category {
+    background: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.skill-category h4 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 5px;
+}
+
+.research-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media print {
+    body {
+        background-color: white;
+        padding: 0;
+    }
+    .cv-container {
+        box-shadow: none;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .cv-container {
+        padding: 20px;
+    }
+    
+    .name {
+        font-size: 2em;
+    }
+    
+    .contact-info {
+        font-size: 1em;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .dates {
+        float: none;
+        display: block;
+        margin-top: 5px;
+    }
+}

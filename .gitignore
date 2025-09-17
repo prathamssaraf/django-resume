@@ -1,0 +1,30 @@
+# Django
+*.pyc
+__pycache__/
+db.sqlite3
+/static/
+.env
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code
+.claude/
+
+# Logs
+*.log
+
+# Media files
+/media/
+
+# Local settings
+local_settings.py

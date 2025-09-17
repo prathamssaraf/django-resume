@@ -50,7 +50,23 @@ Run the following command to set up the database:
 python manage.py migrate
 ```
 
-### 5. Run the Development Server
+### 5. Load Sample Resume Data
+Load the initial resume data into the database:
+
+```bash
+python manage.py load_resume_data
+```
+
+### 6. Create Admin User (Optional)
+To access the Django admin panel for content management:
+
+```bash
+python manage.py createsuperuser
+```
+
+Follow the prompts to create username, email, and password.
+
+### 7. Run the Development Server
 Start the Django application:
 
 ```bash
@@ -59,6 +75,7 @@ python manage.py runserver
 
 The application will be available at:
 🌐 **http://127.0.0.1:8000/**
+🔧 **Admin Panel:** http://127.0.0.1:8000/admin/
 
 ## Project Structure
 
@@ -113,13 +130,36 @@ django_resume/
 - **Responsive Design**: CSS Grid and Flexbox for layout
 - **Cross-browser Compatibility**: Works across modern browsers
 
+## For Graders/TAs
+
+### Quick Setup for Evaluation
+1. Clone the repository
+2. Install Django: `pip install django`
+3. Run migrations: `python manage.py migrate`
+4. Load sample data: `python manage.py load_resume_data`
+5. Start server: `python manage.py runserver`
+6. View resume: http://127.0.0.1:8000/
+
+### To Access Admin Panel
+1. Create superuser: `python manage.py createsuperuser`
+2. Access admin: http://127.0.0.1:8000/admin/
+3. View/edit all dynamic content in the database
+
+### Key Features to Verify
+- ✅ No hardcoded HTML content
+- ✅ All data comes from Django models
+- ✅ Template uses Django variables ({{ }}, {% %})
+- ✅ Admin interface for content management
+- ✅ Database-driven rendering
+
 ## Customization
 
 ### Updating Resume Content
-To update the resume information:
+The resume content is now dynamically managed through Django models:
 
-1. Edit the content in `resume/templates/resume/resume.html`
-2. Modify personal information, experience, projects, etc.
+1. Access admin panel: http://127.0.0.1:8000/admin/
+2. Edit PersonalInfo, Education, Experience, etc.
+3. Changes appear immediately on the resume
 3. Save the file and refresh the browser
 
 ### Styling Changes

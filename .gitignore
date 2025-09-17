@@ -17,7 +17,7 @@ venv/
 .DS_Store
 Thumbs.db
 
-# Claude Code
+# IDE Files
 .claude/
 
 # Logs
